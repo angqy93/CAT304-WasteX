@@ -32,7 +32,7 @@ Use the following command to clone the repository:
   
   <br>
 
-3. Backend Setup `Django`
+4. Backend Setup `Django`
    <ol>
    <li> Set Up a Virtual Environment</li>
     
@@ -81,7 +81,7 @@ Use the following command to clone the repository:
    <br>
    </ol>
 
-3. Frontend Setup
+5. Frontend Setup
    1. Set Up Environment Variables
       - Obtain the `.env` file with the necessary environment variables (provided privately).
       - Place the `.env` file in the project's root directory.
