@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Poppins", serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/*  */
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+.no-scrollbar *::-webkit-scrollbar {
+  display: none;
+}
+*::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #96f49d;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #96f49d;
+}
+
+/*  */
+
+.maptooltip {
+  display: inline-block;
+  position: relative;
+  background: white;
+  padding: 6px;
+  border-radius: 4px;
+  color: black;
+  white-space: nowrap;
+  box-shadow: 0px 0px 10px #00000060;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.maptooltip::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
+  left: 19%;
+  bottom: -5px;
+}
+
+input:focus-visible {
+  outline: none;
+}
