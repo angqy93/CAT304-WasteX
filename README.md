@@ -26,13 +26,21 @@ Use the following command to clone the repository:
 
 <br>
 
-3. Create Directories
-   * `logs` files
-   * `media` files
+3. Open Command Prompt
+   * Change Directory to the project main folder.
+     ```
+     cd <main-folder-location>
+     ```
+
+<br>
+
+4. Create Directories
+   * `logs` directory
+   * `media` directory
   
   <br>
 
-4. Backend Setup `Django`
+5. Backend Setup `Django`
    <ol>
    <li> Set Up a Virtual Environment</li>
     
@@ -81,28 +89,35 @@ Use the following command to clone the repository:
    <br>
    </ol>
 
-5. Frontend Setup
+6. Frontend Setup
    1. Set Up Environment Variables
       - Obtain the `.env` file with the necessary environment variables (provided privately).
       - Place the `.env` file in the project's root directory.
   
    <br>
- 
+
+   2. Open Command Prompt
+      * Change Directory to the root/Frontend Folder
+        ```
+        cd <main-folder/Frontend>
+        ```
+
+   <br>
     
-   2. Install Dependencies
+   3. Install Dependencies
       ```
       npm install
       ```
 
    <br>
   
-   3. Run the Development Server
+   4. Run the Development Server
       ```
       npm run dev
       ```
 
    <br>
   
-   4. Open the website
+   5. Open the website
       - Next.Js will state the website link
 
