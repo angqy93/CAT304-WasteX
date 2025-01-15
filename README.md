@@ -21,10 +21,16 @@ Use the following command to clone the repository:
 <br>
 
 2. Set Up Environment Variables
-- Obtain the `.env` file with the necessary environment variables (provided privately).
-- Place the `.env` file in the root directory of the project.
+   - Obtain the `.env` file with the necessary environment variables (provided privately).
+   - Place the `.env` file in the root directory of the project.
 
 <br>
+
+3. Create Directories
+   * `logs` files
+   * `media` files
+  
+  <br>
 
 3. Backend Setup `Django`
    <ol>
