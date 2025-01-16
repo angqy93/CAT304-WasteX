@@ -248,9 +248,9 @@ const ProductDetails = () => {
                 <h3 className="text-lg font-semibold">Contact Number</h3>
                 <p className="text-gray-600">
                   <Link
-                    href={`tel:${product.created_by.phone || "+0000000000"}`}
+                    href={`tel:${product.created_by.phone_number || "+0000000000"}`}
                   >
-                    {product.created_by.phone || "Not available"}
+                    {product.created_by.phone_number || "Not available"}
                   </Link>
                 </p>
               </div>
