@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@react-google-maps/api": "^2.20.5",
+    "aos": "^2.3.4",
     "axios": "^1.7.9",
     "formik": "^2.4.6",
     "js-cookie": "^3.0.5",
@@ -22,10 +23,12 @@
     "react-hot-toast": "^2.5.1",
     "react-icons": "^5.4.0",
     "react-toastify": "^11.0.2",
+    "swiper": "^11.2.1",
     "use-debounce": "^10.0.4",
     "yup": "^1.6.1"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
