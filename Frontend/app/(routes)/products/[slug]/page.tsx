@@ -201,21 +201,23 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="bg-productBG md:px-12 px-4 py-12 min-h-screen">
+    // bg-productBG
+    <div className=" md:px-12 px-4 py-12 min-h-screen">
       <div className="flex flex-col md:flex-row justify-between gap-10">
         <div className="md:w-7/12">
-          <div className="md:w-11/12 h-[320px]">
+          <div className="mx-8 my-3 h-[320px]">
             <Image
               src={product.image}
               alt={product.title}
               width={280}
               height={320}
-              className="w-full h-full object-contain rounded-lg"
+              className="w-full h-full object-contain rounded-lg bg-gray-100"
             />
           </div>
-          <h2 className="font-semibold text-2xl mt-5 mb-2">{product.title}</h2>
+          <h2 className="font-semibold text-2xl mt-5">{product.title}</h2>
+          <hr className="my-3"/>
           <p
-            className="text-gray-600"
+            className="text-gray-600 p-3"
             dangerouslySetInnerHTML={{ __html: formattedDescription }}
           />
           <div className="mt-5 border-t border-b border-gray-300 py-5 space-y-5">
@@ -268,9 +270,12 @@ const ProductDetails = () => {
             <div className="flex justify-between items-center">
               <p>Price:</p>${product.price}
             </div>
-            <div className="flex justify-between items-center border-t border-b border-gray-600 py-3 my-3">
+            <div className="flex justify-between items-center border-gray-600">
               <p>Shipping:</p>
-              <p>Free</p>
+              <p>No</p>
+            </div><div className="flex justify-between items-center border-b border-gray-600 pb-3">
+              <p>Shipping Fee:</p>
+              <p>0</p>
             </div>
             <div className="flex justify-between items-center">
               <p>Total:</p>${totalPrice.toFixed(2)}
@@ -308,7 +313,7 @@ const ProductDetails = () => {
                 className="mr-2"
                 defaultChecked
               />
-              <label htmlFor="cashOnDelivery">Cash on delivery</label>
+              <label htmlFor="cashOnDelivery">Cash</label>
             </div>
 
             <button

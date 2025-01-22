@@ -173,6 +173,7 @@ const NewListing = () => {
   };
 
   useEffect(() => {
+    
     let debounceTimer: NodeJS.Timeout;
 
     const makeRequest = async () => {

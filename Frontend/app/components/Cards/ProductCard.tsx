@@ -34,25 +34,26 @@ const parseStyledText = (text: string) => {
 
 const ProductCard = ({ product }: any) => {
   return (
-    <div>
+    <div className="rounded-lg border shadow-lg">
       <div className="w-full">
         <Image
           src={product.image}
           alt={product.title}
           width={100}
           height={280}
-          className="w-full h-[180px] object-cover rounded-lg"
+          className="w-full h-[180px] object-contain bg-gray-100 "
         />
       </div>
-      <h3 className="font-bold text-lg mt-2">{product.title}</h3>
-      <p className="my-1 capitalize opacity-80"><b>Type: </b>{product.category}</p>
-        <p className="my-1 capitalize opacity-80"><b>Unit: </b>{product.quantity} {product.unit}</p>
-      <p className="text-ellipsis overflow-hidden text-sm line-clamp-2 opacity-80">
-        {/*product.quantity} {product.unit*/}
-      </p>
-      <p>
-        <b>Fees: </b>${product.price}
-      </p>
+      <div className="p-3">
+        <h3 className="font-bold text-lg text-center">{product.title}</h3>
+        <hr className="my-2"/>
+        <div className="px-3 py-2">
+          <p className="mb-2 w-full capitalize flex flex-wrap"><div className="md:w-1/4 sm:w-full"><b>Type: </b></div><div className="text-gray-500 w-3/4"> {product.category}</div></p>
+          <p className="mb-2 w-full capitalize flex flex-wrap"><div className="md:w-1/4 sm:w-full"><b>Unit: </b></div><div className="text-gray-500 w-3/4"> {product.quantity} {product.unit}</div></p>
+          <p className="mb-2 w-full capitalize flex flex-wrap"><div className="md:w-1/4 sm:w-full"><b>Fees: </b></div><div className="text-gray-500 w-3/4"> {product.price} </div></p>
+        </div>
+      </div>
+    
     </div>
   );
 };

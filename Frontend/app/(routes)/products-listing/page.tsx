@@ -87,14 +87,14 @@ const SalesOrder = () => {
     <div className="bg-productBG md:px-12 px-4 py-12 min-h-[83vh]">
       <div className="bg-white py-4 font-semibold px-5 rounded-xl shadow-md text-lg text-gray-700 flex justify-between">
         <div className="flex items-center">
-          Order lists
+          Product lists
         </div>
         <div>
           <Link href="/new-listing">
             <button
-              className="bg-gray-600 text-white text-md px-2 py-1 rounded flex items-center space-x-2"
+              className="bg-gray-500 text-white text-md p-3 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-300bg-gray-500 text-white text-sm p-2 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-300bg-black text-white p-2 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors duration-300"
             >
-              <Plus /> Add Product
+              <Plus />
             </button>
           </Link>
         </div>

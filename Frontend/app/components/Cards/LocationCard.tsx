@@ -42,66 +42,51 @@ const LocationCard = ({ location }: any) => {
           alt="Location Image"
           width={260}
           height={200}
-          className="w-full h-full object-cover rounded-2xl"
+          className="w-full h-full object-contain rounded-2xl"
         />
       </div>
-      <div>
-        <h2 className="text-xl font-semibold text-gray-800">
-          {location.title}
-        </h2>
+      <div className="p-4 flex flex-col justify-between ">
+        <div className="text-top">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            {location.title}
+          </h2>
+          <div className="flex items-center text-gray-700">
 
-        <p className="text-sm opacity-85 text-ellipsis overflow-hidden line-clamp-3">
-          {parseStyledText(location.description)}
-        </p>
-
-        {/* <div className="flex items-center gap-5 my-3">
-          <div className="flex items-center gap-1">
-            <Image
-              src="/Images/Rating.svg"
-              alt="Rating Icon"
-              width={20}
-              height={20}
-            />
-            <p className="text-gray-700">{location?.rating}</p>
+            <p className="capitalize text-sm">{location?.category}</p>
+            <p className="border-l border-r border-gray-700 px-2 mx-2 text-sm">
+              ${location?.price}
+            </p>
+            <p className="capitalize text-sm">{location?.quantity} {location?.unit}</p>
           </div>
-          <div className="text-gray-700">{location?.vehicle}</div>
-        </div> */}
-        <p className="text-sm my-3 flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide lucide-map-pin bg-[#96F49D] text-white rounded-full p-1"
-          >
-            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          {location.location}
-        </p>
-
-        <div className="flex items-center text-gray-700">
-          <p className="capitalize text-sm">{location?.category}</p>
-          <p className="border-l border-r border-gray-700 px-2 mx-2 text-sm">
-            ${location?.price}
+          <hr className="my-2"/>
+          <p className="text-sm opacity-85 text-ellipsis overflow-hidden line-clamp-3">
+            {parseStyledText(location.description)}
           </p>
-          <p className="capitalize text-sm">{location?.quantity} {location?.unit}</p>
-        </div>
 
-        {/* <div className="flex items-center gap-4 mt-3">
-          <Image
-            src="/Images/Home_Icon.svg"
-            alt="Home_Icon"
-            width={28}
-            height={28}
-          />
-          <p className="text-gray-700">{location?.propertyType}</p>
-        </div> */}
+        </div>
+       
+        <div className="text-bottom">
+          <p className="text-sm my-3 flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-map-pin bg-[#96F49D] text-white rounded-full p-1"
+              >
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              {location.location}
+            </p>
+          
+
+        </div>
       </div>
     </div>
   );

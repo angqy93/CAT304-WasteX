@@ -64,7 +64,11 @@ const Products = () => {
     <div className=" md:px-12 px-4 py-12">
       <div className="flex items-center md:gap-5 gap-3">
         <div
-          className="flex items-center gap-2 md:p-3 p-2 text-sm md:text-base rounded-md bg-white w-fit cursor-pointer"
+          className={`flex items-center gap-2 md:p-3 p-2 text-sm md:text-base rounded-md w-fit cursor-pointer border border-black transition-colors duration-300 ${
+            isFilterOpen 
+            ? "bg-[#32CD32] text-white border-white hover:border-white hover:bg-[#76EE76]" // Active state with light green hover
+            : "bg-white text-black border-black hover:border-white hover:bg-[#ccffcc]" // Default state with light green hover
+        }`}
           onClick={toggleFilter}
         >
           <Image
@@ -85,11 +89,11 @@ const Products = () => {
                     ${
                       selectedTag === tag
                         ? tag === "Chemical"
-                          ? "bg-yellow-200"
+                          ? "bg-yellow-200 hover:bg-yellow-300"
                           : tag === "Paper"
-                          ? "bg-gray-200"
-                          : "bg-orange-200"
-                        : "bg-white"
+                          ? "bg-gray-200 hover:bg-gray-300"
+                          : "bg-orange-200 hover:bg-orange-300"
+                        : "bg-white hover:bg-gray-100"
                     }`}
                 onClick={() => handleTagClick(tag)}
               >
